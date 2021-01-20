@@ -1,5 +1,5 @@
 package assign1
 
-class main {
-    
+fun main() {
+    println("Hello World!")
 }
