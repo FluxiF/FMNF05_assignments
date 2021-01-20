@@ -1,5 +1,7 @@
 package assign1
 
+import kotlin.math.cos
+import kotlin.math.exp
 import kotlin.math.pow
 var steps = 0
 
@@ -22,8 +24,16 @@ fun bisection(f: (Double) -> Double, x0: Double, x1: Double
 }
 
 fun main() {
+    // TASK 1
     val f: (Double) -> Double = {x -> x.pow(4) - x.pow(3) - 1}
-    val res = bisection(f, -2.0 ,0.0)
-    println(res)
+    val res1 = bisection(f, -2.0 ,0.0)
+    println(res1)
+    println(steps)
+    steps = 0
+
+    // TASK 2
+    val g: (Double) -> Double = {x -> exp(-x) - cos(x)}
+    val res2 = bisection(g, 1.0, 2.0)
+    println(res2)
     println(steps)
 }
